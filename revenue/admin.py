@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from revenue.models import RevenueStatistic
+
+admin.site.register(RevenueStatistic)
