@@ -17,6 +17,4 @@ class RevenueStatisticView(APIView):
             total_conversion=Sum("spend__conversion"),
         )
 
-        response = list(queryset)
-
-        return Response(response, status=status.HTTP_200_OK)
+        return Response(queryset, status=status.HTTP_200_OK)

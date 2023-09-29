@@ -13,3 +13,6 @@ class RevenueStatistic(models.Model):
     )
     date = models.DateField()
     revenue = models.DecimalField(max_digits=9, decimal_places=2, default=0)
+
+    def __str__(self):
+        return self.name

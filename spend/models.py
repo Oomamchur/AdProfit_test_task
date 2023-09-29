@@ -8,3 +8,6 @@ class SpendStatistic(models.Model):
     impressions = models.IntegerField(default=0)
     clicks = models.IntegerField(default=0)
     conversion = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name

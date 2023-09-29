@@ -17,6 +17,4 @@ class SpendStatisticView(APIView):
             total_revenue=Sum("revenues__revenue"),
         )
 
-        response = list(queryset)
-
-        return Response(response, status=status.HTTP_200_OK)
+        return Response(queryset, status=status.HTTP_200_OK)
